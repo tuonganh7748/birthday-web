@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Vợ Yêu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Đăng nhập -->
+    <div id="loginBox" class="box">
+      <h2>🔒 Câu hỏi mật khẩu</h2>
+      <p>Người em yêu nhất là ai? (nhập đầy đủ)</p>
+      <input type="text" id="passwordInput" placeholder="Nhập câu trả lời...">
+      <button onclick="checkPassword()">Xác nhận</button>
+      <p id="errorMessage" class="error"></p>
+    </div>
+
+    <!-- Sau đăng nhập -->
+    <div id="mainContent" class="box" style="display:none;">
+      <h2>🎉 Em có muốn nhận món quà to lớn không? 🎁</h2>
+      <button onclick="showGiftQuestion(true)">Có</button>
+      <button onclick="showGiftQuestion(false)">Không</button>
+    </div>
+
+    <!-- Chọn quà -->
+    <div id="giftChoice" class="box" style="display:none;">
+      <p>Dĩ nhiên rồi, anh biết em không thích nhận quà hii ❤️</p>
+      <button onclick="showGifts()">Mời em bấm tiếp</button>
+    </div>
+
+    <!-- Danh sách quà -->
+    <div id="giftList" class="box" style="display:none;">
+      <h3>Mời em chọn quà 🎁</h3>
+      <button onclick="chooseGift(1)">🌟 Vàng</button>
+      <button onclick="chooseGift(2)">💵 Tiền</button>
+      <button onclick="chooseGift(3)">💖 Chồng em</button>
+    </div>
+
+    <!-- Kết quả chọn quà -->
+    <div id="giftResult" class="box" style="display:none;">
+      <p id="giftMessage"></p>
+      <img id="giftImage" src="" style="display:none; max-width:90%; border-radius:10px; margin-top:10px;">
+      <div id="continueBtn" style="margin-top:15px; display:none;">
+        <button onclick="showFinal()">Em bấm tiếp nhé</button>
+      </div>
+    </div>
+
+    <!-- Câu chúc cuối cùng -->
+    <div id="finalBox" class="box" style="display:none;">
+      <h2>💌 Chúc mừng sinh nhật vợ yêu 💌</h2>
+      <p>Chúc em luôn xinh đẹp, hạnh phúc và mãi bên anh ❤️</p>
+      <img src="images/anh2.jpg" alt="Ảnh 2 vợ chồng" class="final-img">
+      <!-- Nhạc nền YouTube -->
+      <iframe width="0" height="0" 
+        src="https://www.youtube.com/embed/ZWB0DFWZ?autoplay=1&loop=1&playlist=ZWB0DFWZ" 
+        frameborder="0" allow="autoplay; encrypted-media">
+      </iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
