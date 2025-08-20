@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-screen" class="screen active">
+    <h2>🎂 Ai là người em yêu nhất? 🎂</h2>
+    <p>Vui lòng nhập đầy đủ họ và tên:</p>
+    <input type="text" id="password" placeholder="Nhập mật khẩu...">
+    <button onclick="checkPassword()">Đăng nhập</button>
+    <p id="error-message"></p>
+  </div>
+
+  <div id="question-screen" class="screen hidden">
+    <h2>Em có muốn nhận món quà to lớn không? 💝</h2>
+    <button onclick="showGiftChoice()">Có</button>
+    <button onclick="showGiftChoice()">Không</button>
+  </div>
+
+  <div id="gift-choice" class="screen hidden">
+    <h2>Mời em bấm tiếp 🎁</h2>
+    <p>Mời em chọn quà:</p>
+    <button onclick="chooseGift(1)">🎀 Món quà 1: Vàng</button>
+    <button onclick="chooseGift(2)">💵 Món quà 2: Tiền</button>
+    <button onclick="chooseGift(3)">💑 Món quà 3: Chồng em</button>
+    <div id="gift-message"></div>
+  </div>
+
+  <div id="final-screen" class="screen hidden">
+    <h2 id="final-message"></h2>
+    <img id="final-image" src="" alt="Kỷ niệm" class="photo">
+    <audio id="bg-music" autoplay loop>
+      <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <canvas id="fireworks"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
